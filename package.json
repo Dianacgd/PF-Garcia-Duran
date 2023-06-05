@@ -1,0 +1,11 @@
+{
+  "name": "preentrega2-garcia-duran",
+  "version": "1.0.0",
+  "description": "Preentrega 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diana Garcia",
+  "license": "ISC"
+}
