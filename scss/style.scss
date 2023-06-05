@@ -1,439 +1,441 @@
 @import "variables";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  html {
-    height: 100%;
+html {
+  height: 100%;
 }
-body{
-    width: 100%;
-    display: grid;
-    grid-template-rows: 190px 1fr 190px;
-    @media (max-width:$md) {
-        body{
-          grid-template-rows: 188px 3fr 1fr;
-        }
+body {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 190px 1fr 190px;
+  @media (max-width: $md) {
+    body {
+      grid-template-rows: 188px 3fr 1fr;
     }
-    @media (min-width: $lg){
-        header{
-          border-bottom: solid 1px $fourthcolor;
-        }
+  }
+  @media (min-width: $lg) {
+    header {
+      border-bottom: solid 1px $fourthcolor;
     }
-    header, footer{
-        background-color: $maincolor;
-      }
-      main{
-        background-color: $neutralcolor;
+  }
+  header,
+  footer {
+    background-color: $maincolor;
+  }
+  main {
+    background-color: $neutralcolor;
+  }
+}
+header {
+  p.anuncio {
+    color: $maincolor;
+    font-family: $secondaryfont;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: $neutralcolor;
+    @media (max-width: $sm) {
+      font-size: 13px;
     }
-} 
-header{
-    p.anuncio {
-        color: $maincolor;
+  }
+  div.container__logo {
+    margin-top: 10px;
+    img {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      height: 90px;
+    }
+  }
+  nav.navbar {
+    border: solid 1px $fourthcolor;
+    border-radius: 10px;
+    padding: 0px;
+    .container-fluid {
+      background-color: $neutralcolor;
+      border-radius: 10px;
+    }
+    .collapse {
+      background-color: $neutralcolor;
+      justify-content: center;
+      ul li a {
         font-family: $secondaryfont;
         font-size: 16px;
-        font-style: normal;
-        letter-spacing: 1px;
-        text-align: center;
-        background-color: $neutralcolor;
-        @media (max-width: $sm){
-            font-size: 13px;
+        font-weight: bold;
+        color: $maincolor;
+        margin: 2px 5px;
+        @media (max-width: $md) {
+          font-size: 14px;
         }
+        &:hover {
+          background-color: $maincolor;
+          color: $neutralcolor;
+          border-radius: 5px;
+        }
+        &:active {
+          background-color: $thirdcolor;
+          color: $neutralcolor;
+          border-radius: 5px;
+        }
+      }
     }
-    div.container__logo {
-        margin-top: 10px;
-        img {
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            height: 90px;
-        }
-    }
-    nav.navbar{
-        border: solid 1px $fourthcolor;
-        border-radius: 10px;
-        padding: 0px;
-        .container-fluid{
-            background-color: $neutralcolor;
-            border-radius: 10px;
-        }
-        .collapse{
-            background-color: $neutralcolor;
-            justify-content: center;
-            ul li a{
-                font-family: $secondaryfont;
-                font-size: 16px;
-                font-weight: bold;
-                color: $maincolor;
-                margin: 2px 5px;
-                @media (max-width:$md) {
-                    font-size: 14px;
-                }
-                &:hover {
-                    background-color: $maincolor;
-                    color: $neutralcolor;
-                    border-radius: 5px;
-                }
-                &:active {
-                    background-color: $thirdcolor;
-                    color: $neutralcolor;
-                    border-radius: 5px;
-                }
-            }
-        }
-    }
+  }
 }
-body{
-    section.slider{
-        width: 65%;
-        margin: auto;
-        overflow: hidden;
-        margin: 35px auto;
-        @media (max-width:$md) {
-            width: 60%;
-            margin-top: 15px;
-        }
-        @media (min-width:$sm) and (max-width: $lg){
-            width: 60%;
-        }
-        ul{
-            display: flex;
-            padding: 0;
-            width: 400%;
-          
-            animation: cambio 20s infinite alternate linear;
-            li{
-                width: 100%;
-                list-style: none;
-                img{
-                    width: 100%;
-                    @keyframes cambio {
-                        0% {
-                          margin-left: 0;
-                        }
-                        20% {
-                          margin-left: 0;
-                        }
-                      
-                        25% {
-                          margin-left: -100%;
-                        }
-                        45% {
-                          margin-left: -100%;
-                        }
-                      
-                        50% {
-                          margin-left: -200%;
-                        }
-                        70% {
-                          margin-left: -200%;
-                        }
-                      
-                        75% {
-                          margin-left: -300%;
-                        }
-                        100% {
-                          margin-left: -300%;
-                        }
-                    }
-                }
-            }
-        }
-    } 
-    div.textointermedio{
-        border-top: solid 1px $secondarycolor;
-        border-bottom: solid 1px $secondarycolor;
-        p{
-            text-align: center;
-            color: $maincolor;
-            font-family: $mainfont;
-            font-size: 20px;
-            font-style: normal;
-            letter-spacing: 1px;
-            margin: 70px 30px;
-            @media (max-width:$sm) {
-                font-size: 15px;
-            }
-            @media (min-width:$sm) and (max-width: $lg){
-                font-size: 18px;
-            }
-        }
+body {
+  section.slider {
+    width: 65%;
+    margin: auto;
+    overflow: hidden;
+    margin: 35px auto;
+    @media (max-width: $md) {
+      width: 60%;
+      margin-top: 15px;
     }
-    section.favoritos{
-        width: 100%;
-        margin: 35px auto;
-        display: grid;
-        grid-template-rows: 25px 1fr;
-        row-gap: 50px;
-        justify-items: center;
-        .favoritos__titulo p{
-            text-align: center;
-            color: $secondarycolor;
-            font-family: $mainfont;
-            font-size: 20px;
-            font-style: normal;
-            letter-spacing: 1px;
-            border-bottom: solid 1px $secondarycolor;
-        }
+    @media (min-width: $sm) and (max-width: $lg) {
+      width: 60%;
     }
-    div.favoritos__container, section.productos{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-self: center;
-        column-gap: 40px;
-        row-gap: 70px;
-        justify-items: center;
-        @media (max-width:$sm) {
-            grid-template-columns: 1fr;
-            row-gap: 50px;
-          }
-        @media (min-width:$md) and (max-width:$lg){
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 30px;
-            row-gap: 60px;
-        }
-        div.card{
-            width: 65%;
-            border-color: $thirdcolor;
-            @media (max-width:$sm) {
-                width: 45%;
-            }
-            @media (min-width:$sm) and (max-width:$lg){
-                width: 75%;
-            }
-            h5{
-                color: $secondarycolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 18px;
-                font-style: normal;
-                letter-spacing: 1px;
-            }
-            p{
-                color: $maincolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 15px;
-                font-style: normal;
-            }
-            a{
-                background-color: $thirdcolor;
-                border-color: $thirdcolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 14px;
-                font-style: normal;
-                text-align: center;
-                color: $neutralcolor;
-                &:hover{
-                    background-color: $fourthcolor;
-                    border: solid 1px $fourthcolor;
-                }
-                &:active{
-                    background-color: $maincolor;
-                    border: solid 1px $maincolor;
-                }
-            }
-        }
-    }
-    section.banner, section.productos{
-        margin: 40px auto;
-        justify-items: center;
-    }
-    section.banner div{
-        display: flex;
-        justify-content: center;
-        img{
-            border: solid 1px $secondarycolor;
-            border-radius: 10px;
-            width: 50%;
-        }
-        @media (max-width:$sm) {
-            width: 70%;
-            margin-top: 15px;
+    ul {
+      display: flex;
+      padding: 0;
+      width: 400%;
 
+      animation: cambio 20s infinite alternate linear;
+      li {
+        width: 100%;
+        list-style: none;
+        img {
+          width: 100%;
+          @keyframes cambio {
+            0% {
+              margin-left: 0;
+            }
+            20% {
+              margin-left: 0;
+            }
+
+            25% {
+              margin-left: -100%;
+            }
+            45% {
+              margin-left: -100%;
+            }
+
+            50% {
+              margin-left: -200%;
+            }
+            70% {
+              margin-left: -200%;
+            }
+
+            75% {
+              margin-left: -300%;
+            }
+            100% {
+              margin-left: -300%;
+            }
+          }
         }
-        @media (min-width:$sm) and (max-width: $lg){
-            width: 60%;
-            margin-top: 15px;
-        }
+      }
     }
-    main.nosotros{
-        display: grid;
-        grid-row: repeat(2, 1fr);
-        row-gap: 40px;
-        padding: 30px 50px;
-        div.nosotros__container{
-            p.nosotros__titulo{
-                text-align: center;
-                color: $secondarycolor;
-                font-family: $mainfont;
-                font-size: 18px;
-                font-style: normal;
-                letter-spacing: 1px;
-                margin-bottom: 30px;
-            }
-            img {
-                width: 100%;
-                margin-bottom: 20px;
-                border-radius: 20px;
-            }
-            ul.nosotros__listaayuda {
-                list-style: none;
-                text-align: justify;
-                p.nosotros__itemayuda {
-                    color: $secondarycolor;
-                    font-family: $secondaryfont;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                    margin: 10px 0px;
-                    border-bottom: solid 1px $secondarycolor;
-                }
-                ul{
-                    list-style: none;
-                    padding: 0px;
-                    li {
-                        margin-bottom: 10px;
-                        color: $maincolor;
-                        font-family: $secondaryfont;
-                        font-size: 16px;
-                        font-style: normal;
-                    }
-                    ol{
-                        margin-left: 40px;
-                    }
-                }
-            }
-        }
+  }
+  div.textointermedio {
+    border-top: solid 1px $secondarycolor;
+    border-bottom: solid 1px $secondarycolor;
+    p {
+      text-align: center;
+      color: $maincolor;
+      font-family: $mainfont;
+      font-size: 20px;
+      font-style: normal;
+      letter-spacing: 1px;
+      margin: 70px 30px;
+      @media (max-width: $sm) {
+        font-size: 15px;
+      }
+      @media (min-width: $sm) and (max-width: $lg) {
+        font-size: 18px;
+      }
     }
-    section.blog{
-        margin: 40px 60px;
-        div.youtube-container{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 10px;
-            row-gap: 40px;  
-            @media (max-width:$sm) {
-                div.youtube-container{
-                  display: grid;
-                  grid-template-columns: 1fr;
-                }
-              }
-              @media (min-width:$sm) and (max-width: $lg){
-                div.youtube-container{
-                  display: grid;
-                  grid-template-columns: repeat(2, 1fr);
-                }
-            }
-        }
+  }
+  section.favoritos {
+    width: 100%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    row-gap: 50px;
+    justify-items: center;
+    .favoritos__titulo p {
+      text-align: center;
+      color: $secondarycolor;
+      font-family: $mainfont;
+      font-size: 20px;
+      font-style: normal;
+      letter-spacing: 1px;
+      border-bottom: solid 1px $secondarycolor;
     }
-    section.productos--kits{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-self: center;
-        column-gap: 40px;
-        row-gap: 70px;
-        justify-items: center;
-        margin: 40px 30px;
-        @media (max-width:768px) {
-            grid-template-columns: 1fr;
-            row-gap: 50px;
-        }
-        @media (min-width:768px) and (max-width: 991px){
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 30px;
-            row-gap: 60px;
-        }
-        div.card{
-            width: 65%;
-            border-color: $thirdcolor;
-            @media (max-width:$sm) {
-                width: 45%;
-            }
-            @media (min-width:$sm) and (max-width:$lg){
-                width: 75%;
-            }
-            h5{
-                color: $secondarycolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 18px;
-                font-style: normal;
-                letter-spacing: 1px;
-            }
-            p{
-                color: $maincolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 15px;
-                font-style: normal;
-            }
-            a{
-                background-color: $thirdcolor;
-                border-color: $thirdcolor;
-                font-weight: bold;
-                font-family: $secondaryfont;
-                font-size: 14px;
-                font-style: normal;
-                text-align: center;
-                color: $neutralcolor;
-                &:hover{
-                    background-color: $fourthcolor;
-                    border: solid 1px $fourthcolor;
-                }
-                &:active{
-                    background-color: $maincolor;
-                    border: solid 1px $maincolor;
-                }
-            }
-        }
-    }
-}
-footer{
+  }
+  div.favoritos__container,
+  section.productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
+    justify-self: center;
+    column-gap: 40px;
+    row-gap: 70px;
     justify-items: center;
-    align-items: center;
-    @media (max-width:$sm) {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
     }
-    p{
-        display: flex;
-        justify-content: center;
-        a{
-            text-decoration: none;
-            font-family: $secondaryfont;
-            font-weight: bold;
-            font-size: 18px;
-            letter-spacing: 1px;
-            font-style: normal;
-            color: $neutralcolor;
-            border-bottom: solid 2px $neutralcolor
+    @media (min-width: $md) and (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 60px;
+    }
+    div.card {
+      width: 65%;
+      border-color: $thirdcolor;
+      @media (max-width: $sm) {
+        width: 45%;
+      }
+      @media (min-width: $sm) and (max-width: $lg) {
+        width: 75%;
+      }
+      h5 {
+        color: $secondarycolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 1px;
+      }
+      p {
+        color: $maincolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 15px;
+        font-style: normal;
+      }
+      a {
+        background-color: $thirdcolor;
+        border-color: $thirdcolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 14px;
+        font-style: normal;
+        text-align: center;
+        color: $neutralcolor;
+        &:hover {
+          background-color: $fourthcolor;
+          border: solid 1px $fourthcolor;
         }
+        &:active {
+          background-color: $maincolor;
+          border: solid 1px $maincolor;
+        }
+      }
     }
-    ul{
-        margin: 0px;
-        padding: 0px;
-        li{
-            list-style: none;
-            margin: 10px 0px;
+  }
+  section.banner,
+  section.productos {
+    margin: 40px auto;
+    justify-items: center;
+  }
+  section.banner div {
+    display: flex;
+    justify-content: center;
+    img {
+      border: solid 1px $secondarycolor;
+      border-radius: 10px;
+      width: 50%;
+    }
+    @media (max-width: $sm) {
+      width: 80%;
+      margin-top: 15px;
+    }
+    @media (min-width: $sm) and (max-width: $lg) {
+      width: 70%;
+      margin-top: 15px;
+    }
+  }
+  main.nosotros {
+    display: grid;
+    grid-row: repeat(2, 1fr);
+    row-gap: 40px;
+    padding: 30px 50px;
+    div.nosotros__container {
+      p.nosotros__titulo {
+        text-align: center;
+        color: $secondarycolor;
+        font-family: $mainfont;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 20px;
+      }
+      ul.nosotros__listaayuda {
+        list-style: none;
+        text-align: justify;
+        p.nosotros__itemayuda {
+          color: $secondarycolor;
+          font-family: $secondaryfont;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: bold;
+          letter-spacing: 1px;
+          margin: 10px 0px;
+          border-bottom: solid 1px $secondarycolor;
+        }
+        ul {
+          list-style: none;
+          padding: 0px;
+          li {
+            margin-bottom: 10px;
+            color: $maincolor;
             font-family: $secondaryfont;
             font-size: 16px;
             font-style: normal;
-            color: $neutralcolor;
-            a{
-                text-decoration: none;
-                font-family: $secondaryfont;
-                font-size: 16px;
-                font-style: normal;
-                color: $neutralcolor;
-            }
+          }
+          ol {
+            margin-left: 40px;
+          }
         }
+      }
     }
+  }
+  section.blog {
+    margin: 40px 60px;
+    div.youtube-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 10px;
+      row-gap: 40px;
+      @media (max-width: $sm) {
+        div.youtube-container {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (min-width: $sm) and (max-width: $lg) {
+        div.youtube-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+  section.productos--kits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    column-gap: 40px;
+    row-gap: 70px;
+    justify-items: center;
+    margin: 40px 30px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 60px;
+    }
+    div.card {
+      width: 65%;
+      border-color: $thirdcolor;
+      @media (max-width: $sm) {
+        width: 45%;
+      }
+      @media (min-width: $sm) and (max-width: $lg) {
+        width: 75%;
+      }
+      h5 {
+        color: $secondarycolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 1px;
+      }
+      p {
+        color: $maincolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 15px;
+        font-style: normal;
+      }
+      a {
+        background-color: $thirdcolor;
+        border-color: $thirdcolor;
+        font-weight: bold;
+        font-family: $secondaryfont;
+        font-size: 14px;
+        font-style: normal;
+        text-align: center;
+        color: $neutralcolor;
+        &:hover {
+          background-color: $fourthcolor;
+          border: solid 1px $fourthcolor;
+        }
+        &:active {
+          background-color: $maincolor;
+          border: solid 1px $maincolor;
+        }
+      }
+    }
+  }
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  @media (max-width: $sm) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      font-family: $secondaryfont;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+      font-style: normal;
+      color: $neutralcolor;
+      border-bottom: solid 2px $neutralcolor;
+    }
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+      list-style: none;
+      margin: 10px 0px;
+      font-family: $secondaryfont;
+      font-size: 16px;
+      font-style: normal;
+      color: $neutralcolor;
+      a {
+        text-decoration: none;
+        font-family: $secondaryfont;
+        font-size: 16px;
+        font-style: normal;
+        color: $neutralcolor;
+      }
+    }
+  }
 }
