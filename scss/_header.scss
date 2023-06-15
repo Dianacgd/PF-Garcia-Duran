@@ -1,0 +1,58 @@
+@import "variables";
+header{
+    background-color: $maincolor;
+    p.anuncio {
+        color: $maincolor;
+        font-family: $secondaryfont;
+        font-size: 16px;
+        font-style: normal;
+        letter-spacing: 1px;
+        text-align: center;
+        background-color: $neutralcolor;
+        @media (max-width: $sm) {
+          font-size: 13px;
+        }
+    }
+    div.container__logo {
+        margin-top: 10px;
+        img {
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+          height: 90px;
+        }
+    }
+    nav.navbar {
+        border: solid 1px $fourthcolor;
+        border-radius: 10px;
+        padding: 0px;
+        .container-fluid {
+          background-color: $neutralcolor;
+          border-radius: 10px;
+        }
+        .collapse {
+          background-color: $neutralcolor;
+          justify-content: center;
+          ul li a {
+            font-family: $secondaryfont;
+            font-size: 16px;
+            font-weight: bold;
+            color: $maincolor;
+            margin: 2px 5px;
+            @media (max-width: $md) {
+              font-size: 14px;
+            }
+            &:hover {
+              background-color: $maincolor;
+              color: $neutralcolor;
+              border-radius: 5px;
+            }
+            &:active {
+              background-color: $thirdcolor;
+              color: $neutralcolor;
+              border-radius: 5px;
+            }
+          }
+        }
+    }
+}

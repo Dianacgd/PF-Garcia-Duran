@@ -1,0 +1,47 @@
+@import "variables";
+footer {
+    background-color: $maincolor;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    p {
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        font-family: $secondaryfont;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-style: normal;
+        color: $neutralcolor;
+        border-bottom: solid 2px $neutralcolor;
+      }
+    }
+    ul {
+      margin: 0px;
+      padding: 0px;
+      li {
+        list-style: none;
+        margin: 10px 0px;
+        font-family: $secondaryfont;
+        font-size: 16px;
+        font-style: normal;
+        color: $neutralcolor;
+        a {
+          text-decoration: none;
+          font-family: $secondaryfont;
+          font-size: 16px;
+          font-style: normal;
+          color: $neutralcolor;
+        }
+      }
+    }
+  }
+  
