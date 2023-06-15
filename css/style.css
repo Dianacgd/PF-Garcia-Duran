@@ -1,35 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  display: grid;
-  grid-template-rows: 190px 1fr 190px;
-}
-@media (max-width: 767px) {
-  body body {
-    grid-template-rows: 188px 3fr 1fr;
-  }
-}
-@media (min-width: 991px) {
-  body header {
-    border-bottom: solid 1px #bf8f8f;
-  }
-}
-body header, body footer {
+header {
   background-color: #8c5858;
 }
-body main {
-  background-color: #fffbf5;
-}
-
 header p.anuncio {
   color: #8c5858;
   font-family: "baskerville-urw", serif;
@@ -87,6 +58,83 @@ header nav.navbar .collapse ul li a:active {
   background-color: #f2784b;
   color: #fffbf5;
   border-radius: 5px;
+}
+
+footer {
+  background-color: #8c5858;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+footer p {
+  display: flex;
+  justify-content: center;
+}
+footer p a {
+  text-decoration: none;
+  font-family: "baskerville-urw", serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-style: normal;
+  color: #fffbf5;
+  border-bottom: solid 2px #fffbf5;
+}
+footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+footer ul li {
+  list-style: none;
+  margin: 10px 0px;
+  font-family: "baskerville-urw", serif;
+  font-size: 16px;
+  font-style: normal;
+  color: #fffbf5;
+}
+footer ul li a {
+  text-decoration: none;
+  font-family: "baskerville-urw", serif;
+  font-size: 16px;
+  font-style: normal;
+  color: #fffbf5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 190px 1fr 190px;
+}
+@media (max-width: 767px) {
+  body body {
+    grid-template-rows: 188px 3fr 1fr;
+  }
+}
+@media (min-width: 991px) {
+  body header {
+    border-bottom: solid 1px #bf8f8f;
+  }
+}
+body main {
+  background-color: #fffbf5;
 }
 
 body section.slider {
@@ -185,7 +233,8 @@ body section.favoritos .favoritos__titulo p {
   letter-spacing: 1px;
   border-bottom: solid 1px #d95323;
 }
-body div.favoritos__container, body section.productos {
+body div.favoritos__container,
+body section.productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-self: center;
@@ -194,33 +243,39 @@ body div.favoritos__container, body section.productos {
   justify-items: center;
 }
 @media (max-width: 480px) {
-  body div.favoritos__container, body section.productos {
+  body div.favoritos__container,
+  body section.productos {
     grid-template-columns: 1fr;
     row-gap: 50px;
   }
 }
 @media (min-width: 767px) and (max-width: 991px) {
-  body div.favoritos__container, body section.productos {
+  body div.favoritos__container,
+  body section.productos {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 60px;
   }
 }
-body div.favoritos__container div.card, body section.productos div.card {
+body div.favoritos__container div.card,
+body section.productos div.card {
   width: 65%;
   border-color: #f2784b;
 }
 @media (max-width: 480px) {
-  body div.favoritos__container div.card, body section.productos div.card {
+  body div.favoritos__container div.card,
+  body section.productos div.card {
     width: 45%;
   }
 }
 @media (min-width: 480px) and (max-width: 991px) {
-  body div.favoritos__container div.card, body section.productos div.card {
+  body div.favoritos__container div.card,
+  body section.productos div.card {
     width: 75%;
   }
 }
-body div.favoritos__container div.card h5, body section.productos div.card h5 {
+body div.favoritos__container div.card h5,
+body section.productos div.card h5 {
   color: #d95323;
   font-weight: bold;
   font-family: "baskerville-urw", serif;
@@ -228,14 +283,16 @@ body div.favoritos__container div.card h5, body section.productos div.card h5 {
   font-style: normal;
   letter-spacing: 1px;
 }
-body div.favoritos__container div.card p, body section.productos div.card p {
+body div.favoritos__container div.card p,
+body section.productos div.card p {
   color: #8c5858;
   font-weight: bold;
   font-family: "baskerville-urw", serif;
   font-size: 15px;
   font-style: normal;
 }
-body div.favoritos__container div.card a, body section.productos div.card a {
+body div.favoritos__container div.card a,
+body section.productos div.card a {
   background-color: #f2784b;
   border-color: #f2784b;
   font-weight: bold;
@@ -245,15 +302,18 @@ body div.favoritos__container div.card a, body section.productos div.card a {
   text-align: center;
   color: #fffbf5;
 }
-body div.favoritos__container div.card a:hover, body section.productos div.card a:hover {
+body div.favoritos__container div.card a:hover,
+body section.productos div.card a:hover {
   background-color: #bf8f8f;
   border: solid 1px #bf8f8f;
 }
-body div.favoritos__container div.card a:active, body section.productos div.card a:active {
+body div.favoritos__container div.card a:active,
+body section.productos div.card a:active {
   background-color: #8c5858;
   border: solid 1px #8c5858;
 }
-body section.banner, body section.productos {
+body section.banner,
+body section.productos {
   margin: 40px auto;
   justify-items: center;
 }
@@ -268,13 +328,13 @@ body section.banner div img {
 }
 @media (max-width: 480px) {
   body section.banner div {
-    width: 70%;
+    width: 80%;
     margin-top: 15px;
   }
 }
 @media (min-width: 480px) and (max-width: 991px) {
   body section.banner div {
-    width: 60%;
+    width: 70%;
     margin-top: 15px;
   }
 }
@@ -347,6 +407,15 @@ body section.blog div.youtube-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+body section.blog div.blog__titulo p {
+  text-align: center;
+  color: #d95323;
+  font-family: "ohno-blazeface", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: 1px;
+  border-bottom: solid 1px #d95323;
+}
 body section.productos--kits {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -415,53 +484,6 @@ body section.productos--kits div.card a:hover {
 body section.productos--kits div.card a:active {
   background-color: #8c5858;
   border: solid 1px #8c5858;
-}
-
-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 40px;
-  justify-items: center;
-  align-items: center;
-}
-@media (max-width: 480px) {
-  footer {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-  }
-}
-footer p {
-  display: flex;
-  justify-content: center;
-}
-footer p a {
-  text-decoration: none;
-  font-family: "baskerville-urw", serif;
-  font-weight: bold;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-style: normal;
-  color: #fffbf5;
-  border-bottom: solid 2px #fffbf5;
-}
-footer ul {
-  margin: 0px;
-  padding: 0px;
-}
-footer ul li {
-  list-style: none;
-  margin: 10px 0px;
-  font-family: "baskerville-urw", serif;
-  font-size: 16px;
-  font-style: normal;
-  color: #fffbf5;
-}
-footer ul li a {
-  text-decoration: none;
-  font-family: "baskerville-urw", serif;
-  font-size: 16px;
-  font-style: normal;
-  color: #fffbf5;
 }
 
 /*# sourceMappingURL=style.css.map */

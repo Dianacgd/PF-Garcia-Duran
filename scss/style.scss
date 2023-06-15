@@ -274,7 +274,19 @@ body {
         }
       }
     }
+    div.blog__titulo {
+      p {
+        text-align: center;
+        color: $secondarycolor;
+        font-family: $mainfont;
+        font-size: 20px;
+        font-style: normal;
+        letter-spacing: 1px;
+        border-bottom: solid 1px $secondarycolor;
+      }
+    }
   }
+  
   section.productos--kits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
